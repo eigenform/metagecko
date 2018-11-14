@@ -1,0 +1,8 @@
+#!/bin/bash
+TARGET='metagecko'
+USER='pi'
+HOST='rpi'
+
+make clean && make && \
+	scp ${TARGET}.bin ${USER}@${HOST}:~/ && \
+	ssh ${USER}@${HOST} "sudo ./icoprog -p < ${TARGET}.bin"

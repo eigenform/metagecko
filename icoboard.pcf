@@ -1,0 +1,23 @@
+# icoboard 100mhz reference clock
+set_io clk_100mhz	R9
+
+# icoboard LEDs
+set_io led1		C8
+set_io led2		F7
+set_io led3		K9
+
+# PMOD P1 Layout
+#  ---------------------
+# |3.3|GND|B11|B10|B9|D8|
+# |3.3|GND|A11|A10|A9|B8|
+#  ---------------------
+set_io exi_sck		D8 
+set_io exi_cs		B9
+set_io exi_miso		B10
+set_io exi_mosi		B11
+
+# RPi GPIOs for SPI
+set_io rpi_sck		H11
+set_io rpi_cs		D4
+set_io rpi_miso		A7
+set_io rpi_mosi		A6
